@@ -30,29 +30,29 @@ def MERGE():
 
 if __name__ == '__main__':
     # COUTING FILES
-    start = time.time()
+    start = time.perf_counter()
     i = 0
     for filename in os.listdir("./0_RENDER_FILES"):
         i = i + 1
-    end = time.time()
+    end = time.perf_counter()
     print("found " + str(i) + " files in " + str(end - start) + "s")
 
     #CROP
-    start = time.time()
-    for filename in os.listdir("./0_RENDER_FILES"):
+    start = time.perf_counter()
+    for filename in filter(lambda f: f.lower().endswith(('.jpg', '.jpeg', '.png')), os.listdir("./0_RENDER_FILES")):
         CROP("./0_RENDER_FILES/"+filename,filename)
-    end = time.time()
+    end = time.perf_counter()
     execution_time(start,end,"CROP")
 
     #MERGE
-    start = time.time()
+    start = time.perf_counter()
     MERGE()
-    end = time.time()
+    end = time.perf_counter()
     execution_time(start,end,"MERGE")
 
     #CLEANUP
-    start = time.time()
+    start = time.perf_counter()
     for f in os.listdir("./1_CROPPED_FILES/"):
         os.remove(os.path.join("./1_CROPPED_FILES/", f))
-    end = time.time()
+    end = time.perf_counter()
     execution_time(start,end,"CLEANUP")

@@ -1,6 +1,6 @@
 # render-slitscan
-[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
-A python script to generate a [https://en.wikipedia.org/wiki/Slit-scan_photography](slit-scan) animation from a PNG sequence.
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]\
+A python script to generate a [slit-scan](https://en.wikipedia.org/wiki/Slit-scan_photography) animation from a PNG sequence.
 
 ## Usage
 ```python
@@ -42,4 +42,4 @@ This work is licensed under a
 [cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
 [cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 
-The full license text can be found [LICENSE.md](here).
+The full license text can be found [here](LICENSE.md).

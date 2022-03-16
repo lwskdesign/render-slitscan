@@ -1,10 +1,8 @@
 # render-slitscan
-Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+A python script to generate a [https://en.wikipedia.org/wiki/Slit-scan_photography](slit-scan) animation from a PNG sequence.
 
-## Requirements
-
-##Usage
-```
+```python
 >>> python3 SLITSCAN.py -h
 usage: SLITSCAN.py [-h] [-r] [-o .] input_dir width height
 
@@ -18,6 +16,10 @@ options:
   -r, --reverse
   -o ., --output-dir .  Optional output directory
 ```
+
+- `input` is the path to the folder containing the PNG sequence
+- `width` will be the width of the finished image. Normally this is the same as all your source image's width
+- `height` is the height of each slice. The lower this value is, the better the "resolution" of the finished image will be.
 
 ## Notes
 - This app only supports PNG-images as input. Therefore it should be at the very end of your post-processing workflow.
